@@ -53,12 +53,13 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/round_container"
             android:text="Refeições"
             android:textAllCaps="false"
-            android:background="@drawable/round_container"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_marginTop="30dp"/>
+            android:onClick="onVisualizaRefeicoes"
+            android:textSize="20sp" />
 
         <Button
             android:layout_width="match_parent"
@@ -69,6 +70,7 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:layout_marginTop="30dp"/>
+            //android:onClick="onVisualizaReceitas"
 
     </LinearLayout>
 

@@ -16,4 +16,12 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun onVisualizaRefeicoes(view: View) {
+        val intent = Intent(this, RefeicoesActivity::class.java)
+        startActivity(intent)
+    }
+
+
+
+
 }

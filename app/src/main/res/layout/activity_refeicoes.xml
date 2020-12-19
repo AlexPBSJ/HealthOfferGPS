@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="50dp"
+    android:background="#C6FFCC"
+    android:orientation="vertical">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_container"
+        android:textColor="@color/black"
+
+        android:textAllCaps="false"
+        android:layout_gravity="bottom"
+        android:textSize="20sp"
+        android:id="@+id/btn_pequenoAlmoco"
+        android:onClick="onPequenoAlmoco"
+        android:text="Pequeno Almoço" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_gravity="bottom"
+        android:id="@+id/btn_Almoco"
+        android:background="@drawable/round_container"
+        android:layout_marginTop="50dp"
+        android:onClick="onAlmoco"
+        android:text="Almoço" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="50dp"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_gravity="bottom"
+        android:id="@+id/btn_Lanche"
+        android:background="@drawable/round_container"
+        android:onClick="onLanche"
+        android:text="Lanche" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/round_container"
+        android:text="Jantar"
+        android:onClick="onJantar"
+        android:id="@+id/btn_Jantar"/>
+
+</LinearLayout>
