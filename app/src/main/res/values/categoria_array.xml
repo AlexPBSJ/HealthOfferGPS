@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categorias_array">
+        <item>Cereais e derivados, tubérculos</item>
+        <item>Hortícolas</item>
+        <item>Fruta</item>
+        <item>Gorduras e óleos</item>
+        <item>Leite e derivados</item>
+        <item>Carne, pescado e ovos</item>
+        <item>Leguminosas</item>
+        <item>Água</item>
+    </string-array>
+</resources>
