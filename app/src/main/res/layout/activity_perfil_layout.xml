@@ -14,6 +14,7 @@
         android:color="@color/black"/>
 
     <EditText
+        android:id="@+id/edNomePerfil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"/>
@@ -45,6 +46,7 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/edIdadePerfil"
             android:layout_width="12dp"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -96,6 +98,7 @@
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/edPesoPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -110,11 +113,12 @@
             android:layout_weight="0.5"/>
 
         <EditText
+            android:id="@+id/edAlturaPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:layout_weight="1"
-            android:layout_gravity="end" />
+            android:layout_gravity="end"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -143,6 +147,7 @@
         android:background="@drawable/round_container"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="30dp"
+        android:onClick="onGuardaPerfil"/>
 
 </LinearLayout>

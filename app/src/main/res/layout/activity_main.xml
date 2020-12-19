@@ -37,7 +37,8 @@
             android:textAllCaps="false"
             android:background="@drawable/round_container"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:onClick="onVisualizaPerfil"/>
 
         <Button
             android:layout_width="match_parent"
