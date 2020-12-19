@@ -11,6 +11,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -26,11 +27,15 @@ class PerfilActivity : AppCompatActivity() {
         val edIdade = findViewById<EditText>(R.id.edIdadePerfil)
         val edPeso = findViewById<EditText>(R.id.edPesoPerfil)
         val edAltura = findViewById<EditText>(R.id.edAlturaPerfil)
+        val rbSexoM = findViewById<RadioButton>(R.id.rbSexoM)
+        val rbSexoF = findViewById<RadioButton>(R.id.rbSexoF)
 
         edNome.isEnabled = false
         edIdade.isEnabled = false
         edPeso.isEnabled = false
         edAltura.isEnabled = false
+        rbSexoF.isEnabled = false
+        rbSexoM.isEnabled = false
 
         val bGuardaPerfil = findViewById<Button>(R.id.bGuardaPerfil)
         bGuardaPerfil.visibility = View.INVISIBLE
@@ -44,6 +49,8 @@ class PerfilActivity : AppCompatActivity() {
         val edIdade = findViewById<EditText>(R.id.edIdadePerfil)
         val edPeso = findViewById<EditText>(R.id.edPesoPerfil)
         val edAltura = findViewById<EditText>(R.id.edAlturaPerfil)
+        val rbSexoM = findViewById<RadioButton>(R.id.rbSexoM)
+        val rbSexoF = findViewById<RadioButton>(R.id.rbSexoF)
 
 
         val filename = FILENAME + "myProfile.txt"
@@ -65,6 +72,11 @@ class PerfilActivity : AppCompatActivity() {
             edIdade.setText(sb.get(1))
             edPeso.setText(sb.get(2))
             edAltura.setText(sb.get(3))
+            if(sb.get(4) == "Masculino")
+                rbSexoM.isChecked = true
+            else if(sb.get(4) == "Feminino")
+                rbSexoF.isChecked = true
+            
 
         } catch (e: IOException) {
             Log.i(TAG, e.toString())
@@ -118,11 +130,15 @@ class PerfilActivity : AppCompatActivity() {
         val edIdade = findViewById<EditText>(R.id.edIdadePerfil)
         val edPeso = findViewById<EditText>(R.id.edPesoPerfil)
         val edAltura = findViewById<EditText>(R.id.edAlturaPerfil)
+        val rbSexoM = findViewById<RadioButton>(R.id.rbSexoM)
+        val rbSexoF = findViewById<RadioButton>(R.id.rbSexoF)
 
         edNome.isEnabled = true
         edIdade.isEnabled = true
         edPeso.isEnabled = true
         edAltura.isEnabled = true
+        rbSexoF.isEnabled = true
+        rbSexoM.isEnabled = true
 
         val bGuardaPerfil = findViewById<Button>(R.id.bGuardaPerfil)
         bGuardaPerfil.visibility = View.VISIBLE
@@ -133,8 +149,17 @@ class PerfilActivity : AppCompatActivity() {
         val edIdade = findViewById<EditText>(R.id.edIdadePerfil)
         val edPeso = findViewById<EditText>(R.id.edPesoPerfil)
         val edAltura = findViewById<EditText>(R.id.edAlturaPerfil)
+        val rbSexoM = findViewById<RadioButton>(R.id.rbSexoM)
+        val rbSexoF = findViewById<RadioButton>(R.id.rbSexoF)
 
         val fileName = FILENAME + "myProfile.txt"
+        val sexo:String
+        if(rbSexoM.isChecked){
+            sexo = "Masculino"
+        }else if(rbSexoF.isChecked){
+            sexo = "Feminino"
+        }else
+            sexo = "Outro"
 
         try {
             if (isExternalStorageWritable()) {
@@ -147,6 +172,7 @@ class PerfilActivity : AppCompatActivity() {
                     ps.println("${edIdade.text.toString()}")
                     ps.println("${edPeso.text.toString()}")
                     ps.println("${edAltura.text.toString()}")
+                    ps.println("$sexo")
                 }
 
             }
@@ -160,6 +186,9 @@ class PerfilActivity : AppCompatActivity() {
         edIdade.isEnabled = false
         edPeso.isEnabled = false
         edAltura.isEnabled = false
+        rbSexoF.isEnabled = false
+        rbSexoM.isEnabled = false
+
         val bGuardaPerfil = findViewById<Button>(R.id.bGuardaPerfil)
         bGuardaPerfil.visibility = View.INVISIBLE
     }
