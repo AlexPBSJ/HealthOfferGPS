@@ -11,10 +11,10 @@ class RefeicoesActivity: AppCompatActivity() {
         setContentView(R.layout.activity_refeicoes)
     }
 
-    //fun onJantar(view: View) {}
-    //fun onLanche(view: View) {}
-    //fun onAlmoco(view: View) {}
-    //fun onPequenoAlmoco(view: View) {}
+    fun onJantar(view: View) {}
+    fun onLanche(view: View) {}
+    fun onAlmoco(view: View) {}
+    fun onPequenoAlmoco(view: View) {}
 
 
 }

@@ -28,5 +28,10 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun onVisualizaReceitas(view: View) {
+        val intent = Intent(this, ReceitasActivity::class.java)
+        startActivity(intent)
+    }
+
 
 }

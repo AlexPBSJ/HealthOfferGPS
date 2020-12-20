@@ -25,6 +25,10 @@
         <activity android:name=".RefeicoesActivity"
                     android:parentActivityName=".MainActivity"
             />
+        <activity android:name=".AlimentosActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ReceitasActivity"/>
+        <activity android:name=".AddAlimentosActivity"/>
     </application>
 
 </manifest>
