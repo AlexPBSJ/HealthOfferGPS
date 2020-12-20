@@ -16,4 +16,13 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun onVisualizaAlimentos(view: View) {
+        val intent = Intent(this, AlimentosActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun onVisualizaReceitas(view: View) {
+        val intent = Intent(this, ReceitasActivity::class.java)
+        startActivity(intent)
+    }
 }
