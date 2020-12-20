@@ -48,7 +48,8 @@
             android:background="@drawable/round_container"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="30dp"
+            android:onClick="onVisualizaAlimentos"/>
 
         <Button
             android:layout_width="match_parent"
@@ -60,6 +61,10 @@
             android:textColor="@color/black"
             android:onClick="onVisualizaRefeicoes"
             android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"
+            android:onClick="onVisualizaReceitas"/>
+
 
         <Button
             android:layout_width="match_parent"
@@ -70,7 +75,7 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:layout_marginTop="30dp"/>
-            //android:onClick="onVisualizaReceitas"
+
 
     </LinearLayout>
 

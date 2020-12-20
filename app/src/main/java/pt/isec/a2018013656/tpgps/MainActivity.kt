@@ -16,12 +16,17 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+
     fun onVisualizaRefeicoes(view: View) {
         val intent = Intent(this, RefeicoesActivity::class.java)
         startActivity(intent)
     }
 
 
+    fun onVisualizaAlimentos(view: View) {
+        val intent = Intent(this, AlimentosActivity::class.java)
+        startActivity(intent)
+    }
 
 
 }
