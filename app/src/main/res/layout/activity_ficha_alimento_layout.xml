@@ -12,10 +12,11 @@
         android:textSize="20sp"
         android:color="@color/black"/>
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"/>
+        android:textSize="20sp"
+        android:color="@color/black"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -24,11 +25,11 @@
         android:textSize="20sp"
         android:color="@color/black"
         android:layout_marginTop="50dp"/>
-
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"/>
+        android:textSize="20sp"
+        android:color="@color/black"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -37,21 +38,10 @@
         android:textSize="20sp"
         android:color="@color/black"
         android:layout_marginTop="50dp"/>
-
-    <Spinner
-        android:id="@+id/spinner_categorias"
-        android:spinnerMode="dropdown"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <Button
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Adicionar"
-        android:textAllCaps="false"
-        android:background="@drawable/round_container"
-        android:textColor="@color/black"
         android:textSize="20sp"
-        android:layout_marginTop="60dp" />
+        android:color="@color/black"/>
 
 </LinearLayout>
