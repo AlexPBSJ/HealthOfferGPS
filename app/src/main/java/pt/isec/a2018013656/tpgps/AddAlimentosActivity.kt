@@ -1,12 +1,19 @@
 package pt.isec.a2018013656.tpgps
 
 import android.os.Bundle
+import android.os.Environment
+import android.provider.Telephony
+import android.provider.Telephony.Mms.Part.FILENAME
+import android.util.Log
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import java.io.File
+import java.io.FileOutputStream
+import java.io.IOException
+import java.io.PrintStream
+import java.nio.file.Files.createDirectories
+import java.nio.file.Files.createDirectory
 
 class AddAlimentosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,4 +41,44 @@ class AddAlimentosActivity : AppCompatActivity() {
             }
         }
     }
+
+    fun onAdicionaAlimento (view: View){
+        val etNome = findViewById<EditText>(R.id.etNomeAlimento)
+        val spinnerCat = findViewById<Spinner>(R.id.spinner_categorias)
+        val etCalorias = findViewById<EditText>(R.id.etCaloriasAlimento)
+
+        if(etNome.text.length < 1 || etCalorias.text.length < 1){
+            Toast.makeText(this, "Por favor preencha todos os campos!", Toast.LENGTH_LONG).show()
+            return
+        }
+
+        val fileName = etNome.text.toString() + ".txt"
+        val makesFile = File("${getExternalFilesDir(null)}/Alimentos/${spinnerCat.selectedItem.toString()}").mkdirs()
+        val filePath = "${getExternalFilesDir(null)}/Alimentos/${spinnerCat.selectedItem.toString()}/"
+
+        try {
+            if (isExternalStorageWritable()) {
+                Log.i(TAG, "onAdicionaAlimento: ")
+                val file = File("${filePath}${fileName}")
+                //val file = File(this?.getExternalFilesDir(null), fileName)
+                file.delete()
+                val ficheiroOutput = FileOutputStream(file, true)
+                ficheiroOutput.use {
+                    val ps = PrintStream(it)
+                    ps.println("${etCalorias.text.toString()}")
+                    ps.println("${spinnerCat.selectedItem.toString()}")
+                }
+
+            }
+            Toast.makeText(this, "Alimento guardado com sucesso", Toast.LENGTH_LONG).show()
+        } catch (e: IOException) {
+            Toast.makeText(this, "ERRO AO GUARDAR ALIMENTO!", Toast.LENGTH_LONG).show()
+        }
+    }
+
+
+    fun isExternalStorageWritable(): Boolean {
+        return Environment.getExternalStorageState() == Environment.MEDIA_MOUNTED
+    }
+
 }
