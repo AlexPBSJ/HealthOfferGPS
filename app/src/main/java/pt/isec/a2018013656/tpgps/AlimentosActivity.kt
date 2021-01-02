@@ -7,21 +7,30 @@ import android.provider.Telephony
 import android.provider.Telephony.Mms.Part.FILENAME
 import android.util.Log
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.EditText
+import android.widget.ListView
 import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
 import java.io.File
 import java.io.FileInputStream
 import java.io.IOException
 
 class AlimentosActivity : AppCompatActivity(){
     var sb = mutableListOf<String>()
+    lateinit var adapter: ArrayAdapter<String>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activivty_alimentos_layout)
 
         leAlimentos()
+
+        val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sb)
+        val lista = findViewById<ListView>(R.id.lv_alimentos)
+        lista.adapter = adapter
     }
+
 
     fun onAddAlimentos(view: View) {
         val intent = Intent(this, AddAlimentosActivity::class.java)
