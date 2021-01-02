@@ -29,6 +29,17 @@ class AlimentosActivity : AppCompatActivity(){
         val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sb)
         val lista = findViewById<ListView>(R.id.lv_alimentos)
         lista.adapter = adapter
+
+        lista.setOnItemClickListener{parent, view, pos, id ->
+            val intent = Intent(this, FichaAlimentoActivty::class.java)
+            intent.apply {
+                intent.action = Intent.ACTION_VIEW
+            }
+            if (intent.resolveActivity(packageManager) != null) {
+                startActivity(intent)
+            }
+        }
+
     }
 
 
