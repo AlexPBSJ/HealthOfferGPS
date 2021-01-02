@@ -51,7 +51,7 @@ class AlimentosActivity : AppCompatActivity(){
                 for (currentFile in listAllFiles) {
                     if (currentFile.name.endsWith(".txt")) {
                         Log.e("downloadFileName", currentFile.name)
-                        sb.add(currentFile.name)
+                        sb.add(currentFile.name.substringBefore('.'))
                     }
                 }
             }

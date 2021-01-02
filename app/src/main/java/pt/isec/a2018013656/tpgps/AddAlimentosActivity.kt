@@ -65,6 +65,7 @@ class AddAlimentosActivity : AppCompatActivity() {
                 val ficheiroOutput = FileOutputStream(file, true)
                 ficheiroOutput.use {
                     val ps = PrintStream(it)
+                    ps.println("${etNome.text.toString()}")
                     ps.println("${etCalorias.text.toString()}")
                     ps.println("${spinnerCat.selectedItem.toString()}")
                 }
