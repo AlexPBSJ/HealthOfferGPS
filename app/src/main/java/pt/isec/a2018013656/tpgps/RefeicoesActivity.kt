@@ -13,8 +13,14 @@ class RefeicoesActivity: AppCompatActivity() {
 
     fun onJantar(view: View) {}
     fun onLanche(view: View) {}
-    fun onAlmoco(view: View) {}
-    fun onPequenoAlmoco(view: View) {}
+    fun onAlmoco(view: View) {
+        val intent = Intent(this, Refeicoes_AlmocoActivity::class.java)
+        startActivity(intent)
+    }
+    fun onPequenoAlmoco(view: View) {
+        val intent = Intent(this, Refeicoes_PequenoAlmocoActivity::class.java)
+        startActivity(intent)
+    }
 
 
 }
