@@ -2,9 +2,14 @@ package pt.isec.a2018013656.tpgps
 
 import android.content.Intent
 import android.os.Bundle
+
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.view.View
+
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 
 class ReceitasActivity: AppCompatActivity() {
 
@@ -29,4 +34,12 @@ class ReceitasActivity: AppCompatActivity() {
             }
         }
     }
+
+    fun onAddReceitas(view: View) {
+        val intent = Intent(this, AddReceitasActivity::class.java)
+        startActivity(intent)
+    }
 }
+
+
+

@@ -16,8 +16,8 @@
         android:id="@+id/tvNomeAlimento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:color="@color/black"/>
+        android:color="@color/black"
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="match_parent"

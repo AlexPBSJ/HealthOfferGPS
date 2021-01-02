@@ -53,15 +53,25 @@
         <activity android:name=".Refeicoes_PequenoAlmocoActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"/>
+
         <activity android:name=".Refeicoes_AlmocoActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"/>
         <activity android:name=".RefeicoesJantarActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"/>
+
         <activity android:name=".RefeicoesLancheActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"/>
+
+        <activity android:name=".AddReceitasActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ReceitasActivity"/>
+
+
+
     </application>
 
 </manifest>
