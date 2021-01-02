@@ -11,14 +11,21 @@ class RefeicoesActivity: AppCompatActivity() {
         setContentView(R.layout.activity_refeicoes)
     }
 
-    fun onJantar(view: View) {}
-    fun onLanche(view: View) {}
+
     fun onAlmoco(view: View) {
         val intent = Intent(this, Refeicoes_AlmocoActivity::class.java)
         startActivity(intent)
     }
     fun onPequenoAlmoco(view: View) {
         val intent = Intent(this, Refeicoes_PequenoAlmocoActivity::class.java)
+        startActivity(intent)
+    }
+    fun onJantar(view: View) {
+        val intent = Intent(this, RefeicoesJantarActivity::class.java)
+        startActivity(intent)
+    }
+    fun onLanche(view: View) {
+        val intent = Intent(this, RefeicoesLancheActivity::class.java)
         startActivity(intent)
     }
 

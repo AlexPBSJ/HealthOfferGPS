@@ -6,7 +6,7 @@
     android:background="#C6FFCC">
 
     <ListView
-        android:id="@+id/lv_alimentos"
+        android:id="@+id/lv_receitas"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
