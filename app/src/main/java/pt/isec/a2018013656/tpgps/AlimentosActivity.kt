@@ -36,6 +36,7 @@ class AlimentosActivity : AppCompatActivity(){
                 intent.action = Intent.ACTION_VIEW
             }
             if (intent.resolveActivity(packageManager) != null) {
+                intent.putExtra("nome", sb.get(pos))
                 startActivity(intent)
             }
         }
