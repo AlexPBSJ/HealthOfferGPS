@@ -37,7 +37,41 @@
         android:layout_marginBottom="16dp"
         android:spinnerMode="dropdown" />
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quantidade"
+        android:layout_marginTop="20dp"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/editTextQuantidade"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="wrap_content"
+        android:inputType="number"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="g"
+        />
+</LinearLayout>
 
+    <Button
+        android:id="@+id/bAdicionaAlimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adicionar"
+        android:textAllCaps="false"
+        android:background="@drawable/round_container"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:onClick="onAdicionaAlimentoReceita"/>
 
 
 </LinearLayout>

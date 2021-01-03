@@ -50,7 +50,7 @@ class AlimentosActivity : AppCompatActivity(){
     }
 
     private fun leAlimentos() {
-        /*
+
         val defpath = "src/main/java/pt/isec/a2018013656/tpgps/alimentos"
         val listaFicheirosDef = File(defpath).walkTopDown()
 
@@ -68,7 +68,6 @@ class AlimentosActivity : AppCompatActivity(){
         } catch (e: IOException) {
             Log.i(TAG, e.toString())
         }
-        */
 
         val filepath = "${getExternalFilesDir(null)}/Alimentos"
         var listAllFiles = File(filepath).walkTopDown()

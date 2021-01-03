@@ -67,8 +67,10 @@
 
         <activity android:name=".AddReceitasActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".ReceitasActivity"/>
+            android:screenOrientation="portrait"/>
+        <activity android:name=".VerReceitaActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
 
 
 
