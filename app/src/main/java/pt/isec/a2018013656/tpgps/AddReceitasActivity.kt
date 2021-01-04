@@ -21,6 +21,27 @@ class AddReceitasActivity : AppCompatActivity() {
         leAlimentos()
         Log.i(TAG, "onCreate: LEU")
 
+        val refeicoes = resources.getStringArray(R.array.refeicoes_array)
+
+        val spinnerRefeicao = findViewById<Spinner>(R.id.spinner_refeicoes)
+        val adapterRefeicao = ArrayAdapter(
+            this,
+            android.R.layout.simple_spinner_item, refeicoes
+        )
+        spinnerRefeicao.adapter = adapterRefeicao
+
+        spinnerRefeicao.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View, position: Int, id: Long
+            ) {
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {
+                // write code to perform some action
+            }
+        }
+
         val spinner = findViewById<Spinner>(R.id.spinner_alimento_existente)
         val adapter = ArrayAdapter(this,android.R.layout.simple_spinner_item, sb)
         spinner.adapter = adapter
@@ -122,6 +143,7 @@ class AddReceitasActivity : AppCompatActivity() {
         val etNomeR = findViewById<EditText>(R.id.etNomeReceita)
         val spinnerAlimento = findViewById<Spinner>(R.id.spinner_alimento_existente)
         val etQuantidade = findViewById<EditText>(R.id.editTextQuantidade)
+        val spinnerRefeicao = findViewById<Spinner>(R.id.spinner_refeicoes)
 
         val calorias = getCalorias(spinnerAlimento.selectedItem.toString())
 
@@ -134,6 +156,10 @@ class AddReceitasActivity : AppCompatActivity() {
                 val ficheiroOutput = FileOutputStream(file, true)
                 ficheiroOutput.use {
                     val ps = PrintStream(it)
+                    if(etNomeR.isEnabled){
+                        ps.println("${spinnerRefeicao.selectedItem.toString()}")
+                        spinnerRefeicao.isEnabled = false
+                    }
                     ps.println("${spinnerAlimento.selectedItem.toString()} ${etQuantidade.text.toString()} ; ${calorias}")
                 }
 

@@ -147,7 +147,8 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:layout_marginTop="50dp"
-        android:layout_gravity="bottom"/>
+        android:layout_gravity="bottom"
+        android:onClick="onNotificacoes"/>
 
     <Button
         android:id="@+id/bGuardaPerfil"

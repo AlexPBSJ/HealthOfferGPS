@@ -61,6 +61,13 @@
         />
 </LinearLayout>
 
+    <Spinner
+        android:id="@+id/spinner_refeicoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:spinnerMode="dropdown" />
+
     <Button
         android:id="@+id/bAdicionaAlimento"
         android:layout_width="match_parent"

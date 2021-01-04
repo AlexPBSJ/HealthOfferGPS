@@ -5,79 +5,33 @@
     android:padding="50dp"
     android:background="#C6FFCC">
 
-    <CheckBox
+    <EditText
+        android:id="@+id/hour_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pequeno Almoço"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:hint="Hora"
+        android:inputType="time"/>
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="datetime"
-        android:hint="Hora"/>
-
-    <CheckBox
+        android:id="@+id/minute_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Almoço"
         android:textSize="20sp"
-        />
+        android:hint="Minuto"
+        android:inputType="time"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="datetime"
-        android:hint="Hora"/>
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lanche"
-        android:textSize="20sp"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="datetime"
-        android:hint="Hora"/>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jantar"
-        android:textSize="20sp"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="datetime"
-        android:hint="Hora"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tocar"
-        android:textSize="20sp"
-        android:color="@color/black"
-        android:layout_marginTop="50dp"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="time"
-        android:hint="Tempo antes do alarme tocar"/>
 
     <Button
+        android:id="@+id/set_alarm_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Guardar"
         android:textAllCaps="false"
-        android:background="@drawable/round_container"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="50dp"
+        android:background="@drawable/round_container"/>
 
 </LinearLayout>

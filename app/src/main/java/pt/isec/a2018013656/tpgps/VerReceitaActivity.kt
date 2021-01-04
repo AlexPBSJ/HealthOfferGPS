@@ -19,6 +19,7 @@ class VerReceitaActivity : AppCompatActivity() {
         val nomeReceita = intent.getStringExtra("nomeReceita")
         var listaIngredientes = mutableListOf<String>()
         var caloriasTotais = 0
+        val nomeRefeicao = findViewById<TextView>(R.id.tvNomeRefeicao)
 
         val tvNome = findViewById<TextView>(R.id.tvNomeReceita)
         tvNome.setText(nomeReceita)
@@ -53,9 +54,13 @@ class VerReceitaActivity : AppCompatActivity() {
             Log.i(TAG, e.toString())
         }
 
+        nomeRefeicao.setText(sb.get(0))
+
         for(x in sb){
-            listaIngredientes.add(x.substringBefore(';'))
-            caloriasTotais += x.substringAfter("; ").toInt()
+            if (x != sb.get(0)) {
+                listaIngredientes.add(x.substringBefore(';'))
+                caloriasTotais += x.substringAfter("; ").toInt()
+            }
         }
 
         val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaIngredientes)

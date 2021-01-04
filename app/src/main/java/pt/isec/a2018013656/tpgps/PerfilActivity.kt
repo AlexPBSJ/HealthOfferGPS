@@ -1,5 +1,6 @@
 package pt.isec.a2018013656.tpgps
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Environment
 import android.os.PersistableBundle
@@ -200,5 +201,10 @@ class PerfilActivity : AppCompatActivity() {
     fun isExternalStorageReadable(): Boolean {
         return Environment.getExternalStorageState() in
                 setOf(Environment.MEDIA_MOUNTED, Environment.MEDIA_MOUNTED_READ_ONLY)
+    }
+
+    fun onNotificacoes(view: View) {
+        val intent = Intent(this, Notificacoes::class.java)
+        startActivity(intent)
     }
 }
