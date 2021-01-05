@@ -22,6 +22,8 @@ class AddReceitasActivity : AppCompatActivity() {
         leAlimentos()
         Log.i(TAG, "onCreate: LEU")
 
+        sb.sort()
+
         val refeicoes = resources.getStringArray(R.array.refeicoes_array)
 
         val spinnerRefeicao = findViewById<Spinner>(R.id.spinner_refeicoes)

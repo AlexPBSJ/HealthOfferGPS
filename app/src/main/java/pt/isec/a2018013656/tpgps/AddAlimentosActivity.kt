@@ -6,6 +6,8 @@ import android.os.Environment
 import android.provider.Telephony
 import android.provider.Telephony.Mms.Part.FILENAME
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +24,8 @@ class AddAlimentosActivity : AppCompatActivity() {
         setContentView(R.layout.activity_add_alimentos_layout)
 
         val categorias = resources.getStringArray(R.array.categorias_array)
+
+        categorias.sort()
 
         val spinner: Spinner = findViewById(R.id.spinner_categorias)
         val adapter = ArrayAdapter(
@@ -41,6 +45,25 @@ class AddAlimentosActivity : AppCompatActivity() {
                 // write code to perform some action
             }
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.guarda_alimento, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.bGuardaAlimento){
+            Log.i(TAG, "onOptionsItemSelected: ENTRO AQUI POIS")
+            guardaAlimento()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    fun guardaAlimento(){
+        onBackPressed()
+        Toast.makeText(this, "Alimento guardada com sucesso", Toast.LENGTH_LONG).show()
     }
 
     override fun onBackPressed() {

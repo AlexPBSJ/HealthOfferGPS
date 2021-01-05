@@ -12,6 +12,6 @@
         <item>Morango;33:Fruta</item>
         <item>Azeite;884:Gorduras e óleos</item>
         <item>Leite;42:Leite e derivados</item>
-        <item>Agua;0;Água</item>
+        <item>Agua;0:Água</item>
     </string-array>
 </resources>
