@@ -3,15 +3,77 @@
     <string-array name="alimentos_array">
         <item>Arroz;130:Cereais e derivados, tubérculos</item>
         <item>Massa;131:Cereais e derivados, tubérculos</item>
+        <item>Cereais;378:Cereais e derivados, tubérculos</item>
+        <item>Batata;86:Cereais e derivados, tubérculos</item>
+        <item>Bolachas;502:Cereais e derivados, tubérculos</item>
+        <item>Pão;265:Cereais e derivados, tubérculos</item>
         <item>Atum;130:Carne, pescado e ovos</item>
-        <item>Bife de vaca;252:Carne, pescado e ovos</item>
-        <item>Alface;15:Hortícolas</item>
-        <item>Tomate;21:Hortícolas</item>
+        <item>Polvo;82:Carne, pescado e ovos</item>
+        <item>Pescada;206:Carne, pescado e ovos</item>
+        <item>Salmão;171:Carne, pescado e ovos</item>
+        <item>Lula;92:Carne, pescado e ovos</item>
+        <item>Dourada;185:Carne, pescado e ovos</item>
+        <item>Sardinha;208:Carne, pescado e ovos</item>
+        <item>Carapau;262:Carne, pescado e ovos</item>
         <item>Bacalhau;82:Carne, pescado e ovos</item>
-        <item>Feijão;155:Leguminosas</item>
+        <item>Camarão;106:Carne, pescado e ovos</item>
+        <item>Bife de vaca;187:Carne, pescado e ovos</item>
+        <item>Bife de porco;248:Carne, pescado e ovos</item>
+        <item>Bife de peru;152:Carne, pescado e ovos</item>
+        <item>Bife de Frango;123:Carne, pescado e ovos</item>
+        <item>Ovo;155:Carne, pescado e ovos</item>
+        <item>Alface;15:Hortícolas</item>
+        <item>Tomate;33:Hortícolas</item>
+        <item>Pimento;26:Hortícolas</item>
+        <item>Abóbora;26:Hortícolas</item>
+        <item>Alho;4:Hortícolas</item>
+        <item>Bróculo;87:Hortícolas</item>
+        <item>Couve-Flor;25:Hortícolas</item>
+        <item>Cogumelo;22:Hortícolas</item>
+        <item>Beringela;25:Hortícolas</item>
+        <item>Pepino;16:Hortícolas</item>
+        <item>Couve;69:Hortícolas</item>
+        <item>Alho-Francês;61:Hortícolas</item>
+        <item>Cenoura;25:Hortícolas</item>
+        <item>Cebola;40:Hortícolas</item>
+        <item>Feijão;85:Leguminosas</item>
+        <item>Ervilha;81:Leguminosas</item>
+        <item>Grão-de-bico;364:Leguminosas</item>
+        <item>Favas;88:Leguminosas</item>
+        <item>Soja;446:Leguminosas</item>
         <item>Morango;33:Fruta</item>
+        <item>Maçã;52:Fruta</item>
+        <item>Nêspera;47:Fruta</item>
+        <item>Pêra;57:Fruta</item>
+        <item>Amora;43:Fruta</item>
+        <item>Framboesa;53:Fruta</item>
+        <item>Cereja;50:Fruta</item>
+        <item>Mirtilo;57:Fruta</item>
+        <item>Uva;67:Fruta</item>
+        <item>Figo;74:Fruta</item>
+        <item>Romã;83:Fruta</item>
+        <item>Azeitona;115:Fruta</item>
+        <item>Laranja;62:Fruta</item>
+        <item>Lima;30:Fruta</item>
+        <item>Limão;17:Fruta</item>
+        <item>Tangerina;37:Fruta</item>
+        <item>Toranja;41:Fruta</item>
+        <item>Maracujá;97:Fruta</item>
+        <item>Abacaxi;50:Fruta</item>
+        <item>Ananás;50:Fruta</item>
+        <item>Ameixa;30:Fruta</item>
+        <item>Manga;60:Fruta</item>
+        <item>Banana;89:Fruta</item>
+        <item>Melancia;30:Fruta</item>
+        <item>Melão;34:Fruta</item>
+        <item>Meloa;34:Fruta</item>
         <item>Azeite;884:Gorduras e óleos</item>
+        <item>Manteiga;717:Gorduras e óleos</item>
+        <item>Óleo de cozinha;884:Gorduras e óleos</item>
         <item>Leite;42:Leite e derivados</item>
-        <item>Agua;0:Água</item>
+        <item>Queijo;402:Leite e derivados</item>
+        <item>Iogurte;59:Leite e derivados</item>
+        <item>Agua;0;Água</item>
+
     </string-array>
 </resources>
