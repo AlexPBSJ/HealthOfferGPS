@@ -1,5 +1,6 @@
 package pt.isec.a2018013656.tpgps
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Environment
 import android.provider.Telephony
@@ -102,7 +103,7 @@ class AddReceitasActivity : AppCompatActivity() {
     }
 
     fun guardaReceita(){
-        finish()
+        onBackPressed()
         Toast.makeText(this, "Receita guardada com sucesso", Toast.LENGTH_LONG).show()
     }
 
@@ -139,11 +140,21 @@ class AddReceitasActivity : AppCompatActivity() {
         return sb.get(1).toInt()
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this, ReceitasActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
     fun onAdicionaAlimentoReceita(view: View){
         val etNomeR = findViewById<EditText>(R.id.etNomeReceita)
         val spinnerAlimento = findViewById<Spinner>(R.id.spinner_alimento_existente)
         val etQuantidade = findViewById<EditText>(R.id.editTextQuantidade)
         val spinnerRefeicao = findViewById<Spinner>(R.id.spinner_refeicoes)
+
+        val aux = etNomeR.text.toString()
+        etNomeR.setText(aux.capitalize())
 
         val calorias = getCalorias(spinnerAlimento.selectedItem.toString())
 

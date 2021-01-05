@@ -63,6 +63,7 @@ class VerReceitaActivity : AppCompatActivity() {
             }
         }
 
+        listaIngredientes.sort()
         val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaIngredientes)
         val lista = findViewById<ListView>(R.id.lv_ingredientes)
         lista.adapter = adapter

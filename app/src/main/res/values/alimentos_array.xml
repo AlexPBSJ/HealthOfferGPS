@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="alimentos_array">
+        <item>Arroz;130:Cereais e derivados, tubérculos</item>
+        <item>Massa;131:Cereais e derivados, tubérculos</item>
+        <item>Atum;130:Carne, pescado e ovos</item>
+        <item>Bife de vaca;252:Carne, pescado e ovos</item>
+        <item>Alface;15:Hortícolas</item>
+        <item>Tomate;21:Hortícolas</item>
+        <item>Bacalhau;82:Carne, pescado e ovos</item>
+        <item>Feijão;155:Leguminosas</item>
+        <item>Morango;33:Fruta</item>
+        <item>Azeite;884:Gorduras e óleos</item>
+        <item>Leite;42:Leite e derivados</item>
+        <item>Agua;0;Água</item>
+    </string-array>
+</resources>

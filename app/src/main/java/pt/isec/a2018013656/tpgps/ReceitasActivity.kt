@@ -42,27 +42,27 @@ class ReceitasActivity: AppCompatActivity() {
     }
 
     private fun leReceitas(){
-            val filepath = "${getExternalFilesDir(null)}/Receitas"
-            var listAllFiles = File(filepath).walkTopDown()
+        val filepath = "${getExternalFilesDir(null)}/Receitas"
+        var listAllFiles = File(filepath).walkTopDown()
 
-            try {
-                if (!isExternalStorageReadable()) {
-                    Log.i(TAG, "External Storage is not readable")
-                    return
-                }
+        try {
+            if (!isExternalStorageReadable()) {
+                Log.i(TAG, "External Storage is not readable")
+                return
+            }
 
-                if (listAllFiles != null) {
-                    for (currentFile in listAllFiles) {
-                        if (currentFile.name.endsWith(".txt")) {
-                            Log.e("downloadFileName", currentFile.name)
-                            listaReceitas.add(currentFile.name.substringBefore('.'))
-                        }
+            if (listAllFiles != null) {
+                for (currentFile in listAllFiles) {
+                    if (currentFile.name.endsWith(".txt")) {
+                        Log.e("downloadFileName", currentFile.name)
+                        listaReceitas.add(currentFile.name.substringBefore('.'))
                     }
                 }
-
-            } catch (e: IOException) {
-                Log.i(TAG, e.toString())
             }
+
+        } catch (e: IOException) {
+            Log.i(TAG, e.toString())
+        }
     }
 
     fun isExternalStorageReadable(): Boolean {
@@ -73,11 +73,7 @@ class ReceitasActivity: AppCompatActivity() {
     fun onAddReceitas(view: View) {
         val intent = Intent(this, AddReceitasActivity::class.java)
         startActivity(intent)
-    }
-
-    fun onAddPinoquios(view: View) {
-        val intent = Intent(this, AddReceitasActivity::class.java)
-        startActivity(intent)
+        finish()
     }
 }
 

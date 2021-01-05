@@ -1,5 +1,6 @@
 package pt.isec.a2018013656.tpgps
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Environment
 import android.provider.Telephony
@@ -42,15 +43,26 @@ class AddAlimentosActivity : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this, AlimentosActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
     fun onAdicionaAlimento (view: View){
         val etNome = findViewById<EditText>(R.id.etNomeAlimento)
         val spinnerCat = findViewById<Spinner>(R.id.spinner_categorias)
         val etCalorias = findViewById<EditText>(R.id.etCaloriasAlimento)
 
+        val aux = etNome.text.toString()
+
         if(etNome.text.length < 1 || etCalorias.text.length < 1){
             Toast.makeText(this, "Por favor preencha todos os campos!", Toast.LENGTH_LONG).show()
             return
         }
+
+        etNome.setText(aux.capitalize())
 
         val fileName = etNome.text.toString() + ".txt"
         val makesFile = File("${getExternalFilesDir(null)}/Alimentos/${spinnerCat.selectedItem.toString()}").mkdirs()

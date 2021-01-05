@@ -26,6 +26,7 @@ class AlimentosActivity : AppCompatActivity(){
 
         leAlimentos()
 
+        sb.sort()
         val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sb)
         val lista = findViewById<ListView>(R.id.lv_alimentos)
         lista.adapter = adapter
@@ -47,6 +48,7 @@ class AlimentosActivity : AppCompatActivity(){
     fun onAddAlimentos(view: View) {
         val intent = Intent(this, AddAlimentosActivity::class.java)
         startActivity(intent)
+        finish()
     }
 
     private fun leAlimentos() {
